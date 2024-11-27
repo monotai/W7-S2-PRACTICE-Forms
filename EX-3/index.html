@@ -3,48 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CADT Schoolarship</title>
+    <title>Scholarship</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div>
-        <div>
-            <h1>Personal Information</h1>
-            <p>Name</p>
-            <input type="text">
-            <p>sex</p>
-            <input type="radio" name="sex">
-            <label>male</label>
-            <input type="radio" name="sex">
-            <label>female</label>
-            <p>Date of Birch</p>
-            <input type="date">
-            <p>Contact information</p>
-            <p>Phone Number</p>
-            <input type="number">
-            <p>Email</p>
-            <input type="email">
-            <p>Parent's Phone Number</p>
-            <input type="number">
-            <p>who</p>
-            <input type="text">
-            <p>Address</p>
+    <div class="container">
+        <div class="section">
+            <h2>Personal Information</h2>
+            <hr>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Vann Vat" required>
+            
+            <p>Sex</p>
+            <label><input type="radio" name="sex" required> Male</label>
+            <label><input type="radio" name="sex"> Female</label>
 
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
+
+            <label for="picture">Picture</label>
+            <input type="file" id="picture" accept="image/*">
+
+            <h3>Contact Information</h3>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="012345678" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com" required>
+            
+            <label for="parent-phone">Parent's Phone Number</label>
+            <input type="tel" id="parent-phone" placeholder="012345678">
+
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="Street, City, Country">
         </div>
-        <div>
-            <h1>Academic Background</h1>
+
+        <div class="section">
+            <h2>Academic Background</h2>
+            <hr>
+            <p>Subject of Study</p>
+            <label><input type="radio" name="subject"> Science</label>
+            <label><input type="radio" name="subject"> Social Science</label>
+
             <p>Grade</p>
-            <p>school</p>
-            <input type="text">
-            <p>Know Information by:</p>
-            <select>
-                <option></option>
+            <label><input type="radio" name="grade"> A</label>
+            <label><input type="radio" name="grade"> B</label>
+            <label><input type="radio" name="grade"> C</label>
+            <label><input type="radio" name="grade"> D</label>
+            <label><input type="radio" name="grade"> E</label>
+
+            <label for="school">School</label>
+            <input type="text" id="school" placeholder="School Name" required>
+
+            <label for="info-source">How did you know about us?</label>
+            <select id="info-source">
+                <option value="" disabled selected>Select</option>
+                <option value="friend">Friend</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="website">Website</option>
             </select>
         </div>
-        <div>
-            <div>Departhment</div>
-        </div>
-        <div>
-            <div>More Information</div>
+
+        <div class="section">
+            <h2>Department</h2>
+            <hr>
+            <label><input type="radio" name="department"> Computer Science</label>
+            <label><input type="radio" name="department"> Telecoms and Network</label>
+            <label><input type="radio" name="department"> Digital Business</label>
+            <hr>
+            <button type="submit" class="submit-button">Submit</button>
+            <h2>More Information</h2>
+            <hr>
+            <div class="contact">
+                <svg class="logo-contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16.42V19.9561C21 20.4811 20.5941 20.9167 20.0705 20.9537C19.6331 20.9846 19.2763 21 19 21C10.1634 21 3 13.8366 3 5C3 4.72371 3.01545 4.36687 3.04635 3.9295C3.08337 3.40588 3.51894 3 4.04386 3H7.5801C7.83678 3 8.05176 3.19442 8.07753 3.4498C8.10067 3.67907 8.12218 3.86314 8.14207 4.00202C8.34435 5.41472 8.75753 6.75936 9.3487 8.00303C9.44359 8.20265 9.38171 8.44159 9.20185 8.57006L7.04355 10.1118C8.35752 13.1811 10.8189 15.6425 13.8882 16.9565L15.4271 14.8019C15.5572 14.6199 15.799 14.5573 16.001 14.6532C17.2446 15.2439 18.5891 15.6566 20.0016 15.8584C20.1396 15.8782 20.3225 15.8995 20.5502 15.9225C20.8056 15.9483 21 16.1633 21 16.42Z"></path></svg>
+                <svg class="logo-contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"></path></svg>
+                <svg class="logo-contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 16.9913 5.65783 21.1283 10.4385 21.8785V14.8906H7.89941V12H10.4385V9.79688C10.4385 7.29063 11.9314 5.90625 14.2156 5.90625C15.3097 5.90625 16.4541 6.10156 16.4541 6.10156V8.5625H15.1931C13.9509 8.5625 13.5635 9.33334 13.5635 10.1242V12H16.3369L15.8936 14.8906H13.5635V21.8785C18.3441 21.1283 22.001 16.9913 22.001 12C22.001 6.47715 17.5238 2 12.001 2Z"></path></svg>
+                <svg class="logo-contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12.3584 9.38246C11.3857 9.78702 9.4418 10.6244 6.5266 11.8945C6.05321 12.0827 5.80524 12.2669 5.78266 12.4469C5.74451 12.7513 6.12561 12.8711 6.64458 13.0343C6.71517 13.0565 6.78832 13.0795 6.8633 13.1039C7.37388 13.2698 8.06071 13.464 8.41776 13.4717C8.74164 13.4787 9.10313 13.3452 9.50222 13.0711C12.226 11.2325 13.632 10.3032 13.7203 10.2832C13.7826 10.269 13.8689 10.2513 13.9273 10.3032C13.9858 10.3552 13.98 10.4536 13.9739 10.48C13.9361 10.641 12.4401 12.0318 11.666 12.7515C11.4351 12.9661 11.2101 13.1853 10.9833 13.4039C10.509 13.8611 10.1533 14.204 11.003 14.764C11.8644 15.3317 12.7323 15.8982 13.5724 16.4971C13.9867 16.7925 14.359 17.0579 14.8188 17.0156C15.0861 16.991 15.3621 16.7397 15.5022 15.9903C15.8335 14.2193 16.4847 10.3821 16.6352 8.80083C16.6484 8.6623 16.6318 8.485 16.6185 8.40717C16.6052 8.32934 16.5773 8.21844 16.4762 8.13635C16.3563 8.03913 16.1714 8.01863 16.0887 8.02009C15.7125 8.02672 15.1355 8.22737 12.3584 9.38246Z"></path></svg>
+                <svg class="logo-contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z"></path></svg>
+            </div>
         </div>
     </div>
 </body>

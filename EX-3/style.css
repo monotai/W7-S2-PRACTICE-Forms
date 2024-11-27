@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .logo-contact {
+    width: 20px;
+    margin: 0 5px;
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  @media (min-width: 768px){
+    .container {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  
+  .container .section:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
