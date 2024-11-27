@@ -1,12 +1,13 @@
 div input:first-child:focus {
-    background-color: blue;
-    color: white;
+    background-color: #F1F3F5;
+    outline-color: gray;
 }
 div button:nth-child(2):hover {
-    background: gray;
+    background: #CED4DA;
 }
 div input:nth-child(3) {
+    border: 1px solid black;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 0px 2px gray;
+    box-shadow: 0px 2px #ADB5BD;
 }
